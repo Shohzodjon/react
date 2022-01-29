@@ -1,17 +1,38 @@
-import React from 'react';
+//import ReactDOM from 'react-dom';
+/*
+const element = {
+    type:'h1',
+    props:{
+        title:'foo', children:"hello"
+    }
+}
+
+const contanier = document.querySelector('#root');
+
+const node = document.createElement(element.type);
+
+node.title = element.props.title;
+
+const text = document.createTextNode('');
+text['nodeValue'] = element.props.children;
+
+node.append(text);
+
+contanier.append(node);
+*/
+
+
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const element = (
+    <div id='foo'>
+  <a>Bar</a>
+  <br></br>
+  
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    </div>
+)
+
+const contanier = document.getElementById('root');
+ReactDOM.render(element, contanier);
